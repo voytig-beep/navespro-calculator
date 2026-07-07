@@ -284,7 +284,7 @@ export function App() {
           НавесПро
         </a>
         <nav aria-label="Основная навигация">
-          <a href={isAdminMode ? "/" : "#calculator"}>Калькулятор</a>
+          <a href={isAdminMode ? import.meta.env.BASE_URL : "#calculator"}>Калькулятор</a>
           {!isAdminMode && <a href="#estimate">Смета</a>}
           {isAdminMode && <a href="#admin">Прайс</a>}
           {!isAdminMode && <a href="#contacts">Контакты</a>}
