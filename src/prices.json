@@ -1,0 +1,35 @@
+{
+  "updated": "July 2026",
+  "base": {
+    "steelPerM2": 4200,
+    "manufacturingPerM2": 2600,
+    "consumablesPerM2": 850,
+    "delivery": 18000
+  },
+  "roofTypes": {
+    "single": { "label": "Односкатный", "multiplier": 1 },
+    "gable": { "label": "Двускатный", "multiplier": 1.14 },
+    "arched": { "label": "Арочный", "multiplier": 1.22 }
+  },
+  "coverings": {
+    "cellPoly": { "label": "Сотовый поликарбонат", "pricePerM2": 1600 },
+    "solidPoly": { "label": "Монолитный поликарбонат", "pricePerM2": 3100 },
+    "profSheet": { "label": "Профнастил", "pricePerM2": 1900 },
+    "metalTile": { "label": "Металлочерепица", "pricePerM2": 2600 }
+  },
+  "frames": {
+    "standard": { "label": "Стандарт", "multiplier": 1 },
+    "reinforced": { "label": "Усиленный", "multiplier": 1.18 },
+    "premium": { "label": "Премиум", "multiplier": 1.32 }
+  },
+  "paint": {
+    "primer": { "label": "Грунт-эмаль", "pricePerM2": 900 },
+    "powder": { "label": "Порошковая окраска", "pricePerM2": 1450 },
+    "zinc": { "label": "Грунт + цинк", "pricePerM2": 1750 }
+  },
+  "extras": {
+    "installationPerM2": 2300,
+    "drainage": 24000,
+    "snowGuards": 18000
+  }
+}
