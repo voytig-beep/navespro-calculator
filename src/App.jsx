@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
+import { CanopyPreview3D } from "./CanopyPreview3D.jsx";
 import { calculateEstimate } from "./calc.js";
-import heroImage from "./assets/canopy-hero.png";
 import defaultPrices from "./prices.json";
 
 const steps = ["Размеры", "Конструкция", "Материалы", "Монтаж", "Смета"];
@@ -327,7 +327,7 @@ export function App() {
             </div>
 
             <aside className="hero-card" aria-label="Пример расчёта">
-              <img alt="Современный металлический навес у частного дома" src={heroImage} />
+              <CanopyPreview3D form={form} />
               <div className="sample">
                 <p>Пример: навес {form.length} x {form.width} м · стандарт</p>
                 {result.rows.slice(0, 5).map(([label, value]) => (
