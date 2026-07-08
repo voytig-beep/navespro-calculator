@@ -82,7 +82,7 @@ function buildCanopy(group, form) {
     transparent: true,
     transmission: form.covering === "cellPoly" || form.covering === "solidPoly" ? 0.22 : 0,
   });
-  const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xd7ff7a, transparent: true, opacity: 0.62 });
+  const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x9aa69a, transparent: true, opacity: 0.28 });
 
   const yAt = (z) => height + ((z + width / 2) / width) * rise;
   const xLeft = -length / 2;
@@ -116,15 +116,6 @@ function buildCanopy(group, form) {
     const z = zFront + (width * i) / (purlinCount - 1);
     addBeam(group, new THREE.Vector3(xLeft - 0.12, yAt(z) - 0.075, z), new THREE.Vector3(xRight + 0.12, yAt(z) - 0.075, z), 0.04, braceMaterial);
   }
-
-  const segmentCount = Math.max(3, Math.round(lengthMeters / 2));
-  [zFront, zBack].forEach((z) => {
-    for (let i = 0; i < segmentCount; i += 1) {
-      const x0 = xLeft + (length * i) / segmentCount;
-      const x1 = xLeft + (length * (i + 1)) / segmentCount;
-      addBeam(group, new THREE.Vector3(x0, yAt(z) - 0.45, z), new THREE.Vector3(x1, yAt(z) - 0.08, z), 0.034, braceMaterial);
-    }
-  });
 
   const roofGeometry = new THREE.BufferGeometry();
   roofGeometry.setAttribute(
